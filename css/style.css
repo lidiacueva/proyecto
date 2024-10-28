@@ -12,50 +12,6 @@
   body{
     scroll-behavior: smooth;
   }
-  
-  
-
-   @media(max-width:991px) {
-    .container-hero{
-      flex-direction: column;
-      text-align: center;
-      width: 200px;
-    }
-    .container-info-hero{
-      padding: 0;
-
-    }
-    .container-info-hero h1{
-     margin-top: 0;
-    }
-    .container-info-hero p{
-      margin-top: 15px;
-    }
-    .container-info-hero a{
-      margin-top: 20px;
-      
-    }
-    .pseudo-container{
-      flex-direction: column;
-      padding: 30px 30px 0px 30px;
-
-    }
-    .pseudo-box{
-      margin-bottom: 30px;
-    }
-    .blog-card{
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 10px;
-      text-align: center;
-    }
-    .blog-img{
-      width: 50px;
-      
-    }
-   
-   
-   }
     
 
 h1 {
@@ -265,47 +221,122 @@ background: #070bcee7;;
 
     /*blog página principal*/
 
-    .blog-container{
-      padding: 20px;
-      background-color: #edf7fa;
-    }
-
-    .blog-card{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .blog-img{
-      flex-grow: 1;
-      height: 600px;
-      width: 60%;
-    }
-
-    .blog-img img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .blog-content{
-      flex-grow: 1;
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 10px;
-    }
-
-    .blog-content h4{
-     text-align: center;
-     font-size: 40px;
-     padding: 20px;
-    }
     
+.blog-container {
+  padding: 20px;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  background-color: #e7e8ff;
+  transition: 0.5s;
+}
+
+.blog-card:nth-child(even) {
+  background-color: #071c5b;
+  flex-direction: row-reverse;
+  color: #e7e8ff;
+  transition: 0.5s;
+}
+
+.blog-card:hover {
+  box-shadow: 3px 0px 15px 3px rgba(76, 76, 76, 0.2274509804);
+}
+
+.blog-card:hover .blog-img img {
+  width: 900px;
+  height: 900px;
+}
+
+.blog-img {
+  flex-grow: 1;
+  height: 600px;
+  width: 60%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.blog-content {
+  flex-grow: 1;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  transition: 0.5s;
+}
+
+.blog-content h3::first-letter {
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: rgb(7, 1, 1);
+}
+
+.img-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-container div {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  background-color: #071c5b;
+}
+.img-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.5s;
+}
+
+    
+    @media (max-width: 1200px) {
+      .hero_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e7e8ff;
+      }
+      .hero_section {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero_section h1 {
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: -10px;
+      }
+      .pseudo-container{
+        align-items: center;
+        flex-direction: column;
+      }
+      .pseudo-box{
+        margin-bottom: 40px;
+        width: 300px;
+      }
+      
+      }
 
       /*footer*/
       footer{
@@ -438,8 +469,10 @@ background: #070bcee7;;
        /*conocer más*/
 
        .blog-container-conocer-más{
-        padding: 100px;
-        background-color: #edf7fa;
+        padding: 5px;
+        background-color: #85e3ff;
+        width: 100%;
+        object-fit: cover;
       }
   
       .blog-card-conocer-más{
@@ -449,12 +482,14 @@ background: #070bcee7;;
         width: 100%;
         gap: 15px;
         padding: 20px;
+        object-fit: cover;
       }
   
-      .blog-conocer-más img{
+      .blog-img-conocer-más{
         flex-grow: 1;
-        height: 20%;
-        width: 20%;
+        height: 600px;
+        width: 170%;
+        object-fit: cover;
       }
   
       .blog-img-conocer-más img{
@@ -468,20 +503,16 @@ background: #070bcee7;;
         width: 40%;
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 50px;
         gap: 10px;
+        font-size: 18px;
+        
       }
-
-      .blog-card-conocer-más h1{
-        text-align: center;
-        font-size: 40px;
-        padding: 10px;
-         }
-      .blog-card-conocer-más p{
-        text-align: left;
-        font-size: 20px;
-      }
-    
+      .blog-content-conocer-más h1{
+       font-size: 40px;
+       padding: 20px;
+       text-align: center;
+       }
       
 
 
@@ -602,11 +633,122 @@ background: #070bcee7;;
          flex-direction: column;
          padding: 50px;
          gap: 10px;
-         font-size: 18px;
+         
          
        }
-       .blog-content-dia-del-agua h1{
+       .blog-content-día-del-agua h1{
         font-size: 40px;
         padding: 20px;
        }
+
+       .dia-del-agua-container{
+        padding: 110px 110px ;
+        color: #080000;
+        background-color: #fff;
+        
+        }
+        .día-del-agua{
+            padding: 10px;
+        }
+        .día-del-agua h2{
+           font-size: 50px ;
+           margin-bottom:30px;
+           font-family: "Inter", sans-serif;
+           color: #486f99;
+           }
+  
+        .día-del-agua p{
+          font-size: 20px ;
+        }
+
+        /*soluciones y cuidados*/
+
+        .blog-container-soluciones-y-cuidados{
+          padding: 5px;
+          background-color: #85e3ff;
+          width: 100%;
+          object-fit: cover;
+        }
+    
+        .blog-card-soluciones-y-cuidados{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          gap: 15px;
+          padding: 20px;
+          object-fit: cover;
+        }
+    
+        .blog-img-soluciones-y-cuidados{
+          flex-grow: 1;
+          height: 600px;
+          width: 170%;
+          object-fit: cover;
+        }
+    
+        .blog-img-soluciones-y-cuidados img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        .blog-content-soluciones-y-cuidados{
+          flex-grow: 1;
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          padding: 50px;
+          gap: 10px;
+          font-size: 18px;
+          
+        }
+        .blog-content-soluciones-y-cuidados h1{
+         font-size: 40px;
+         padding: 20px;
+         
+        }
+
+        .soluciones-y-cuidados-container{
+          padding: 110px 110px ;
+          color: #080000;
+          background-color: #fff;
+          
+          }
+          .soluciones-y-cuidados{
+              padding: 10px;
+          }
+          .soluciones-y-cuidados h2{
+             font-size: 50px ;
+             margin-bottom:30px;
+             font-family: "Inter", sans-serif;
+             color: #486f99;
+             }
+             .soluciones-y-cuidados h3{
+              padding: 10px;
+              background-color: #aff8d8;
+              color:#02010ac1;
+             }
+    
+          .soluciones-y-cuidados p{
+            font-size: 17px ;
+            margin-bottom: 20px;
+            background-color: #dbffd6;
+          }
+          .img-container div {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            background-color: #071c5b;
+          }
+          
+          .img-1,
+           .img-2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+          }
+  
+
 
